@@ -1,0 +1,93 @@
+<!--
+  Copyright (c) 2016, <your name>. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+<dom-module id="body-parts">
+    <style>
+        :host {
+            display: block;
+            --paper-input-container-disabled: {
+                opacity: 0.9;
+
+            };
+            --my-toolbar-color: black;
+        }
+
+        .container {
+            vertical-align: middle;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .column {
+            display: table;
+        }
+
+        .column paper-input {
+            display: table-cell;
+            padding: 0px 10px;
+        }
+
+        .column paper-button {
+            top: 15px;
+            margin: 0px 5px;
+        }
+
+        a:hover {
+            opacity: 0.6 !important;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        paper-material {
+            --shadow-elevation-4dp: {
+
+                /** box-shadow: 0px 4px 5px 0 rgba(0, 129, 198, 0.14),
+                // 0px 1px 10px 0 rgba(0, 129, 198, 0.12),
+                // -19px 2px 4px -1px rgba(0, 129, 198, 0.6);
+                /**/
+                box-shadow: 0px 4px 5px 0 var(--my-toolbar-color),
+                0px 1px 10px 0 var(--my-toolbar-color),
+                -19px 2px 4px -1px var(--my-toolbar-color);
+
+            };
+            width: 95%;
+            margin: 5px auto;
+            padding: 10px;
+            height: 100%;
+            overflow: auto;
+        }
+    </style>
+    <template>
+        <div id="body_parts_content">
+            <template is="dom-if" if="{{ isShowAll(state) }}">
+                <paper-material id="body_parts_container" elevation="2">
+                    <div id="body_parts_list">
+                    </div>
+                </paper-material>
+            </template>
+            <template is="dom-if" if="{{ isShow(state) }}">
+                <div id="body_part_show">
+                    <div class="column">
+                        <paper-input label="id" value="{{bodyPartMap.id}}" disabled></paper-input>
+                        <paper-input label="name" value="{{bodyPartMap.name}}" disabled></paper-input>
+                        <paper-button type="button" on-tap="edit" raised>edit</paper-button>
+                        <paper-button on-tap="delete" raised>delete</paper-button>
+                    </div>
+                </div>
+            </template>
+            <template is="dom-if" if="{{ isEdit(state) }}">
+                <div id="body_part_edit">
+                    <div class="column">
+                        <paper-input label="id" value="{{bodyPartMap.id}}" disabled></paper-input>
+                        <paper-input label="name" value="{{bodyPartMap.name}}"></paper-input>
+                        <paper-button on-tap="cancel" raised>cancel</paper-button>
+                        <paper-button on-tap="save" raised>save</paper-button>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </template>
+</dom-module>

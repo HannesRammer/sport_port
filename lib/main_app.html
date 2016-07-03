@@ -1,0 +1,97 @@
+<!--
+  Copyright (c) 2016, <your name>. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<dom-module id="main-app">
+    <template>
+        <style>
+            :host {
+                display: block;
+                --my-toolbar-color: "";
+            }
+
+            nav{
+
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding:50px 0;
+                background-color: #f1f1f1;
+                height: 100%; /* Full height */
+                position: fixed; /* Make it stick, even on scroll */
+                overflow: auto; /* Enable scrolling if the sidenav has too much content */
+
+                width: 200px;
+            }
+
+            #project_menu {
+                width: 200px;
+
+            }
+
+            #project_content {
+                margin-left: 200px;
+                overflow-y: scroll;
+                overflow-x: auto;
+                height: 830px;
+            }
+
+            a {
+                display: block;
+                color: #000;
+                padding: 8px 0 8px 16px;
+                text-decoration: none;
+                opacity: 0.35;
+            }
+
+            .active {
+                opacity: 1 !important;
+            }
+
+            a:hover {
+                opacity: 0.6 !important;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .yellow {
+                background: #FBBC05;
+                background: linear-gradient(to right, #FBBC05, #FBBC05, #FBBC05, #FBBC05, #FBBC05, #FBBC05, #FBBC05, #FBBC05, rgba(0, 0, 0, 0));
+                color: black;
+
+            }
+
+            .blue {
+                background: #4285F4;
+                background: linear-gradient(to right, #4285F4, #4285F4, #4285F4, #4285F4, #4285F4, #4285F4, #4285F4, #4285F4, rgba(0, 0, 0, 0));
+                color: black;
+            }
+
+            .green {
+                background: #34A853;
+                background: linear-gradient(to right, #34A853, #34A853, #34A853, #34A853, #34A853, #34A853, #34A853, #34A853, rgba(0, 0, 0, 0));
+                color: black;
+            }
+
+            .red {
+                background: #EA4335;
+                background: linear-gradient(to right, #EA4335, #EA4335, #EA4335, #EA4335, #EA4335, #EA4335, #EA4335, #EA4335, rgba(0, 0, 0, 0));
+                color: black;
+            }
+
+        </style>
+        <nav id="project_menu">
+            <ul>
+
+            </ul>
+        </nav>
+        <div id="project_content">
+
+        </div>
+
+    </template>
+</dom-module>

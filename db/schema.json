@@ -1,0 +1,209 @@
+{
+  "body_parts": {
+    "id": {
+      "type": "INT",
+      "default": "",
+      "null": "NO"
+    },
+    "name": {
+      "type": "VARCHAR",
+      "default": "",
+      "null": "YES"
+    }
+  },
+  "relationDivider": "to",
+  "exercise_to_muscles": {
+    "id": {
+      "type": "INT",
+      "default": "",
+      "null": "NO"
+    },
+    "muscle_id": {
+      "type": "INT",
+      "default": "",
+      "null": "YES"
+    },
+    "exercise_id": {
+      "type": "INT",
+      "default": "",
+      "null": "YES"
+    },
+    "body_part_id": {
+      "type": "INT",
+      "default": "",
+      "null": "YES"
+    },
+    "muscle_type": {
+      "type": "VARCHAR",
+      "default": "",
+      "null": "YES"
+    },
+    "active": {
+      "type": "TINT",
+      "default": "",
+      "null": "YES"
+    }
+  },
+  "exercises": {
+    "id": {
+      "type": "INT",
+      "default": "",
+      "null": "NO"
+    },
+    "name": {
+      "type": "VARCHAR",
+      "default": "",
+      "null": "YES"
+    },
+    "image1": {
+      "type": "VARCHAR",
+      "default": "",
+      "null": "YES"
+    },
+    "description": {
+      "type": "TEXT",
+      "default": "",
+      "null": "YES"
+    },
+    "image2": {
+      "type": "VARCHAR",
+      "default": "",
+      "null": "YES"
+    },
+    "main_description": {
+      "type": "TEXT",
+      "default": "",
+      "null": "YES"
+    },
+    "how_to": {
+      "type": "TEXT",
+      "default": "",
+      "null": "YES"
+    },
+    "how_not_to": {
+      "type": "TEXT",
+      "default": "",
+      "null": "YES"
+    },
+    "info": {
+      "type": "TEXT",
+      "default": "",
+      "null": "YES"
+    },
+    "exercise_type": {
+      "type": "VARCHAR",
+      "default": "",
+      "null": "YES"
+    }
+  },
+  "muscles": {
+    "id": {
+      "type": "INT",
+      "default": "",
+      "null": "NO"
+    },
+    "name": {
+      "type": "MTEXT",
+      "default": "",
+      "null": "YES"
+    },
+    "picture_id": {
+      "type": "INT",
+      "default": "",
+      "null": "YES"
+    }
+  },
+  "schema_migrations": {
+    "version": {
+      "type": "VARCHAR",
+      "default": "",
+      "null": "NO"
+    }
+  },
+  "test": {
+    "id": {
+      "type": "INT",
+      "default": "",
+      "null": "NO"
+    },
+    "created_at": {
+      "type": "DATETIME",
+      "default": "",
+      "null": "YES"
+    },
+    "updated_at": {
+      "type": "TIMESTAMP",
+      "default": "CURRENT_TIMESTAMP",
+      "null": "NO"
+    }
+  },
+  "user_to_exercises": {
+    "id": {
+      "type": "INT",
+      "default": "",
+      "null": "NO"
+    },
+    "user_id": {
+      "type": "INT",
+      "default": "",
+      "null": "YES"
+    },
+    "exercise_id": {
+      "type": "INT",
+      "default": "",
+      "null": "YES"
+    },
+    "created_at": {
+      "type": "DATETIME",
+      "default": "",
+      "null": "YES"
+    },
+    "updated_at": {
+      "type": "DATETIME",
+      "default": "",
+      "null": "YES"
+    }
+  },
+  "users": {
+    "id": {
+      "type": "INT",
+      "default": "",
+      "null": "NO"
+    },
+    "username": {
+      "type": "VARCHAR",
+      "default": "",
+      "null": "YES"
+    },
+    "email": {
+      "type": "VARCHAR",
+      "default": "",
+      "null": "YES"
+    },
+    "password_hash": {
+      "type": "VARCHAR",
+      "default": "",
+      "null": "YES"
+    },
+    "password_salt": {
+      "type": "VARCHAR",
+      "default": "",
+      "null": "YES"
+    },
+    "created_at": {
+      "type": "DATETIME",
+      "default": "",
+      "null": "YES"
+    },
+    "updated_at": {
+      "type": "DATETIME",
+      "default": "",
+      "null": "YES"
+    },
+    "admin": {
+      "type": "TINT",
+      "default": "",
+      "null": "YES"
+    }
+  }
+}
